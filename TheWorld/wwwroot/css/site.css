@@ -1,7 +1,7 @@
 ﻿body {
     font-family: sans-serif;
     font-size: 14px;
-    margin:0;
+    margin: 0px;
 }
 
 label {
@@ -16,17 +16,18 @@ input[type=text], input[type=password], textarea {
 }
 
 #main {
-    background-color: #eee
+    background-color: #eee;
+    margin: 2px;
 }
 
 #footer {
     background-color: #222;
     color: #eee;
-     padding: 3px;
-     margin:0;
-     position:fixed;
-     bottom:0;
-     width:100%
+    padding: 3px;
+    margin: 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%
 }
 
 /*#sidebar img {
@@ -40,7 +41,7 @@ input[type=text], input[type=password], textarea {
 }
 
 .menu {
-    font-size:12px;
+    font-size: 12px;
 }
 
     .menu li {
@@ -48,19 +49,36 @@ input[type=text], input[type=password], textarea {
     }
 
         .menu li.active {
-            font-weight:bold;
+            font-weight: bold;
         }
+
+        .menu li a {
+            color: #eee;
+        }
+
 #sidebar {
-    background:black;
-    color:#eee;
-    position:fixed;
-    height:100%;
-    width:250px;
-    overflow:hidden;
-    left:0;
-    margin:0;
+    background: black;
+    color: #eee;
+    position: fixed;
+    height: 100%;
+    width: 250px;
+    overflow: hidden;
+    left: 0;
+    margin: 0;
+    transition: left ease .25s
 }
 
+    #sidebar.hide-sidebar {
+        left:-250px;
+        transition: left ease .25s
+    }
+
 #wrapper {
-    margin:0 0 0 250px;
+    margin: 0 0 0 250px;
+    transition: margin-left ease .25s
 }
+
+    #wrapper.hide-sidebar {
+        margin-left: 0;
+        transition: margin-left ease .25s
+    }
